@@ -5,6 +5,7 @@ import userRoutes from "../routes/user.routes";
 import tenantRoutes from "../routes/tenant.routes";
 import roleRoutes from "../routes/role.routes";
 import tenantAdminRoutes from "../routes/tenant-admin.routes";
+import authRoutes from "../routes/auth.routes";
 
 const router = Router();
 
@@ -35,6 +36,7 @@ router.use("/api/v1", roleRoutes);
 router.use("/api/v1", userRoutes);
 router.use("/api/v1", tenantRoutes);
 router.use("/api/v1", tenantAdminRoutes);
+router.use("/auth", authRoutes);
 
 
 // Catch-all route for undefined endpoints
